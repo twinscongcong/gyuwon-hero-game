@@ -37,7 +37,7 @@ let hero = { x:140, y:360, w:80, h:80, vy:0 };
 let bomb = { x:360, y:450, r:16 };
 let block = null;
 
-let gravity = 0.9;
+let gravity = 0.75;
 let jumping = false;
 let speed = 4;
 let score = 0;
@@ -68,7 +68,7 @@ canvas.addEventListener("mousedown", jump);
 
 function jump() {
   if (!jumping && !gameOver) {
-    hero.vy = -16;
+    hero.vy = -20;
     jumping = true;
     webActive = true;
     block = { x: hero.x - 10, y: hero.y + 90, w: 100, h: 15 };
@@ -191,4 +191,5 @@ function loop() {
 loop();
 </script>
 </body>
+
 </html>
